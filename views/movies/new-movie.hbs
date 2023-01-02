@@ -1,0 +1,23 @@
+<h2>Movie Creating Form</h2>
+
+<form method="post">
+  <label for="title">Title</label>
+  <input type="text" name="title" placeholder="Movie Title" />
+
+  <label for="genre">Genre</label>
+  <input type="text" name="genre" placeholder="Movie Genre" />
+
+  <label for="plot">Plot</label>
+  <input type="text" name="plot" placeholder="Movie Plot" />
+
+  <label for="cost">Cost:</label>
+
+  <select name="cost" id="cost" multiple>
+    {{#each celebrities}}
+      <option value="{{_id}}">{{name}}</option>
+    {{/each}}
+  </select>
+
+  <button>Save</button>
+
+</form>
